@@ -1,21 +1,29 @@
-•⁠ ⁠ {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 9rem;
 }
 
 .App {
@@ -26,63 +34,85 @@ code {
   color: white;
 }
 
-p {
-  font-size: 1.6rem;
-}
-
-h1 {
-  font-size: 6rem;
-}
-
-.main__container {
-  width: 50%;
-  height: 100vh;
-  background: rgba(86, 86, 86, 0.3);
-  backdrop-filter: blur(5px);
+.App::before {
+  content: "";
+  /* background: url('./images/sunny.jpg') no-repeat center center/cover; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .container {
-  max-width: 700;
-  height: 700px;
-  margin: auto;
+  width: 50%;
+  height: 100vh;
+  padding: 0 1rem;
+  background: rgba(86, 86, 86, 0.3);
+  backdrop-filter: blur(12px);
   position: relative;
+  left: 0;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top: 5%;
-  padding: 0 1rem;
 }
 
-.Weather__insights {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+.container .top {
   width: 100%;
   margin: 1rem auto;
+  margin-bottom: 40%;
 }
 
-.search-bar {
-  text-align: center;
+.container .description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0;
+  transform: rotate(270deg);
+}
+
+.container .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  margin: 1rem auto;
   padding: 1rem;
-  transition: border-color 0.3s, width 0.3s;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.search-input {
+.bold {
+  font-weight: 700;
+}
+
+.App .search {
+  text-align: right;
+  padding: 1rem;
+}
+
+.App input {
   padding: 0.7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.1);
+  /* transition: 0.3s; */
+}
+
+.input:focus {
+  width: 300px;
+  border-color: green;
 }
 
 ::placeholder {
   color: white;
 }
 
-.search-input:focus {
-  width: 300px;
-  border-color: rgba(255, 255, 255, 0.8);
+.App footer {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  text-align: center;
+  color: black;
 }
