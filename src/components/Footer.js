@@ -22,7 +22,7 @@ const Footer = () => {
         </a>
         {""} and{" "}
         <a
-          href="https://magnificent-starburst-8dd5a3.netlify.app/"
+          href="https://comforting-elf-5b9045.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
